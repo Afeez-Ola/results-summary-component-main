@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+
+    --light-slate-blue: hsl(252, 100%, 67%);
+    --light-royal-blue: hsl(241, 81%, 54%);
+    --violet-blue: hsla(256, 72%, 46%, 1);
+    --persian-blue: hsla(241, 72%, 46%, 0);
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+    --font-weight-bold: url("./assets/fonts/static/HankenGrotesk-Bold.ttf");
+    --font-weight-medium: url("./assets/fonts/static/HankenGrotesk-Medium.ttf");
+
+}
+
+body {
+    background-color: var(--white);
+    -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+    font-family: "customFont";
+    src: url("./assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
+    font-weight: 500 800;
+}
+
+body,
+input,
+button {
+    font-size: 18px;
+    font-family: customFont, serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+#card{
+    width: 40%;
+    height: fit-content;
+    position: absolute;
+    left: 30%;
+    top: 30%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+.left_card{
+    background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+    border-radius: 18px;
+    position: relative;
+    z-index: 10;
+
+}
+
+.left_card h3{
+    color: var(--light-lavender);
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 20px;
+    margin: 10px auto;
+}
+
+.circle{
+    width:200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(var(--violet-blue),var(--persian-blue));
+    margin: auto;
+    text-align: center;
+}
+.score{
+    font-weight: 800;
+    font-size: 5rem;
+    color: var(--white);
+    text-align: center;
+    padding-top: 40px;
+}
+
+.hundred{
+    font-weight: 500;
+    font-size: 0.8rem;
+    color: var(--light-lavender);  
+}
+
+.bottom_note{
+    width: 70%;
+    padding: 30px;
+    margin: auto ;
+    text-align: center;
+}
+
+.bottom_note > h2{
+    color: var(--pale-blue);
+    padding-bottom: 5px;
+}
+
+.bottom_note > p{
+    color: var(--light-lavender);
+}
+
+
+/* Right Card */
+.right_card{
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 5px 5px var(--white );
+    margin-left: -15px;
+}
+
+.right_card > h3{
+    text-align: left;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.skill{
+    padding: 20px;
+    margin: 0 auto;
+}
+.skills {
+    border-radius: 12px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.left{
+    display: flex;
+}
+
+.skills p {
+    font-family: "customFont", sans-serif;
+    font-weight: 600;
+    padding: 10px;
+    /* color: #3C4155; */
+}
+
+.skills img {
+    padding-left: 5px;
+}
+
+.skills span {
+    color: #D2DBE0;
+}
+
+.red{
+    background: hsla(0, 100%, 67%, 0.116);
+}
+
+.red .left{
+    color: var(--light-red);
+}
+
+.yellow{
+    background: #ffd75d2f;
+}
+
+.yellow .left{
+    color: var(--orangey-yellow);
+}
+.green{
+    background: hsla(166, 100%, 37%, 0.103);
+}
+
+.green .left{
+    color: var(--green-teal);
+}
+.blue{
+    background: hsla(234, 85%, 45%, 0.048);
+    margin-bottom: 0;
+}
+
+.blue .left{
+    color: var(--cobalt-blue);
+}
+
+.button button{
+    width: 80%;
+    background: var(--dark-gray-blue);
+    padding: 10px;
+    border-radius: 20px;
+    display: block;
+    margin: 10px auto 20px auto;
+    text-align: center;
+    color: var(--white);
+}
+
+.button button:hover{
+    background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+
+}
+
+@media (max-width:568px) {
+    #card{
+        width: 100%;
+        grid-template-columns: 1fr;
+        margin: auto;
+        position: fixed;
+        inset: 0;
+        overflow: auto;
+        place-items: center;
+    }
+
+    .left_card{
+        border-radius: 0 0 25px 25px;
+        width: 100%;
+    }
+
+    .right_card{
+        width: 100%;
+    }
+}
+
+
+
+
